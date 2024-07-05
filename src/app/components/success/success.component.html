@@ -1,0 +1,14 @@
+<div class="intro">
+  <div class="container">
+    <div class="wrap-list" *ngIf="errorMessage; else dataContent">
+      <p>{{ errorMessage }}</p>
+    </div>
+    <ng-template #dataContent>
+      <div class="wrap-list">
+        <div class="element" *ngFor="let user of usersPasswords">
+          <p>Password: {{ user.password }}</p>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>
